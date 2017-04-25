@@ -1,0 +1,3540 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/slap-editor/slap#readme"
+
+    >slap (v0.1.61)</a>
+</h1>
+<h4>Sublime-like terminal-based text editor</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap">module slap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.slap">
+            function <span class="apidocSignatureSpan"></span>slap
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseFindForm">
+            function <span class="apidocSignatureSpan">slap.</span>BaseFindForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseForm">
+            function <span class="apidocSignatureSpan">slap.</span>BaseForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Button">
+            function <span class="apidocSignatureSpan">slap.</span>Button
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane">
+            function <span class="apidocSignatureSpan">slap.</span>EditorPane
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FileBrowser">
+            function <span class="apidocSignatureSpan">slap.</span>FileBrowser
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FindForm">
+            function <span class="apidocSignatureSpan">slap.</span>FindForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.GoLineForm">
+            function <span class="apidocSignatureSpan">slap.</span>GoLineForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header">
+            function <span class="apidocSignatureSpan">slap.</span>Header
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane">
+            function <span class="apidocSignatureSpan">slap.</span>Pane
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList">
+            function <span class="apidocSignatureSpan">slap.</span>PaneList
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsCloseForm">
+            function <span class="apidocSignatureSpan">slap.</span>SaveAsCloseForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsForm">
+            function <span class="apidocSignatureSpan">slap.</span>SaveAsForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap">
+            function <span class="apidocSignatureSpan">slap.</span>Slap
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>BaseFindForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>BaseForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>Button.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>EditorPane.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>FileBrowser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>FindForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>GoLineForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>Header.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>Pane.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>PaneList.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>SaveAsCloseForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>SaveAsForm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.</span>Slap.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.BaseFindForm">module slap.BaseFindForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseFindForm.BaseFindForm">
+            function <span class="apidocSignatureSpan">slap.</span>BaseFindForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.BaseFindForm.prototype">module slap.BaseFindForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseFindForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseFindForm.prototype.find">
+            function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>find
+            <span class="apidocSignatureSpan">(text, direction)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseFindForm.prototype.resetEditor">
+            function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>resetEditor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.BaseForm">module slap.BaseForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseForm.BaseForm">
+            function <span class="apidocSignatureSpan">slap.</span>BaseForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.BaseForm.prototype">module slap.BaseForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseForm.prototype.cancel">
+            function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>cancel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.BaseForm.prototype.submit">
+            function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>submit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Button">module slap.Button</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Button.Button">
+            function <span class="apidocSignatureSpan">slap.</span>Button
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Button.prototype">module slap.Button.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Button.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.Button.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.EditorPane">module slap.EditorPane</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.EditorPane">
+            function <span class="apidocSignatureSpan">slap.</span>EditorPane
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.EditorPane.prototype">module slap.EditorPane.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.prototype.close">
+            function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.prototype.getTitle">
+            function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>getTitle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.prototype.save">
+            function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>save
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.EditorPane.prototype.setCurrent">
+            function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>setCurrent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.FileBrowser">module slap.FileBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FileBrowser.FileBrowser">
+            function <span class="apidocSignatureSpan">slap.</span>FileBrowser
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.FileBrowser.prototype">module slap.FileBrowser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FileBrowser.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.FileBrowser.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.FindForm">module slap.FindForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FindForm.FindForm">
+            function <span class="apidocSignatureSpan">slap.</span>FindForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.FindForm.</span>_invalidRegExpMessageRegExp</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.FindForm.</span>_regExpRegExp</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">slap.FindForm.</span>_label</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.FindForm.prototype">module slap.FindForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FindForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.FindForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.FindForm.prototype.selectRange">
+            function <span class="apidocSignatureSpan">slap.FindForm.prototype.</span>selectRange
+            <span class="apidocSignatureSpan">(range)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.GoLineForm">module slap.GoLineForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.GoLineForm.GoLineForm">
+            function <span class="apidocSignatureSpan">slap.</span>GoLineForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">slap.GoLineForm.</span>_label</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.GoLineForm.prototype">module slap.GoLineForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.GoLineForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.GoLineForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Header">module slap.Header</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header.Header">
+            function <span class="apidocSignatureSpan">slap.</span>Header
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Header.prototype">module slap.Header.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header.prototype._blink">
+            function <span class="apidocSignatureSpan">slap.Header.prototype.</span>_blink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.Header.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header.prototype.message">
+            function <span class="apidocSignatureSpan">slap.Header.prototype.</span>message
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Header.prototype.render">
+            function <span class="apidocSignatureSpan">slap.Header.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Pane">module slap.Pane</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane.Pane">
+            function <span class="apidocSignatureSpan">slap.</span>Pane
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Pane.prototype">module slap.Pane.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane.prototype.close">
+            function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane.prototype.getTitle">
+            function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>getTitle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Pane.prototype.setCurrent">
+            function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>setCurrent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.PaneList">module slap.PaneList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList.PaneList">
+            function <span class="apidocSignatureSpan">slap.</span>PaneList
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.PaneList.prototype">module slap.PaneList.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList.prototype.close">
+            function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList.prototype.getTitle">
+            function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>getTitle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.PaneList.prototype.update">
+            function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.SaveAsCloseForm">module slap.SaveAsCloseForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsCloseForm.SaveAsCloseForm">
+            function <span class="apidocSignatureSpan">slap.</span>SaveAsCloseForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.SaveAsCloseForm.prototype">module slap.SaveAsCloseForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsCloseForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.SaveAsCloseForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.SaveAsForm">module slap.SaveAsForm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsForm.SaveAsForm">
+            function <span class="apidocSignatureSpan">slap.</span>SaveAsForm
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">slap.SaveAsForm.</span>_label</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.SaveAsForm.prototype">module slap.SaveAsForm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.SaveAsForm.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.SaveAsForm.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Slap">module slap.Slap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.Slap">
+            function <span class="apidocSignatureSpan">slap.</span>Slap
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.getUserDir">
+            function <span class="apidocSignatureSpan">slap.Slap.</span>getUserDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slap.Slap.</span>global</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slap.Slap.prototype">module slap.Slap.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype._initHandlers">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_initHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype._initPlugins">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_initPlugins
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype._stopKeyPropagation">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_stopKeyPropagation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.getCurrentPane">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>getCurrentPane
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.getPrevPane">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>getPrevPane
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.help">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>help
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.open">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.paneForPath">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>paneForPath
+            <span class="apidocSignatureSpan">(panePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slap.Slap.prototype.quit">
+            function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>quit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap" id="apidoc.module.slap">module slap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.slap" id="apidoc.element.slap.slap">
+        function <span class="apidocSignatureSpan"></span>slap
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">slap = function (options) {
+  opts = _.merge(opts, options);
+  return Promise.all([
+    Slap.getUserDir().catch(Promise.resolve()),
+    process.stdin.isTTY ? Promise.resolve() : readAsync(process.stdin) // read pipe to stdin into a new file if there is one
+  ]).spread(function (userDir, stdin) {
+    if (userDir) opts = _.merge({logger: {file: path.resolve(userDir, package.name+&#x27;.log&#x27;)}}, opts);
+    opts = _.merge({editor: {logger: opts.logger}}, opts);
+    opts.screenOpts.input = ttys.stdin; // Uses ttys to read from /dev/tty
+    util.logger(opts.logger);
+    util.logger.info(&#x22;loading...&#x22;);
+    util.logger.verbose(&#x22;configuration:&#x22;, opts);
+
+    if (!opts.config) fs // if a user config doesn&#x27;t exist, make one by copying a template
+      .createReadStream(path.join(__dirname, &#x27;..&#x27;, &#x27;default-config.ini&#x27;))
+        .pipe(fs.createWriteStream(path.join(userDir, &#x27;config&#x27;)));
+
+    if (!opts.screen) opts.screen = new blessed.Screen(opts.screenOpts);
+    opts.screen.logger = opts.logger;
+    var slap = new Slap(opts);
+
+    Promise.all(opts._.map(function (path, i) {
+      return slap.open(path.toString(), !i);
+    })).done();
+
+    if (stdin || !opts._.length) { // if no files are passed
+      var pane = new EditorPane({parent: slap});
+      // Sets stdin from pipe if it exists
+      if (stdin) pane.editor.textBuf.setText(stdin.toString());
+      pane.setCurrent();
+    }
+
+    require(&#x27;update-notifier&#x27;)({pkg: package}).notify();
+
+    return slap.ready.disposer(function (slap) { slap.quit(); });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseFindForm" id="apidoc.element.slap.BaseFindForm">
+        function <span class="apidocSignatureSpan">slap.</span>BaseFindForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseFindForm(opts) {
+  var self = this;
+
+  if (!(self instanceof BaseFindForm)) return new BaseFindForm(opts);
+
+  BaseForm.call(self, _.merge({
+    prevEditorState: {}
+  }, Slap.global.options.form.baseFind, opts));
+
+  self.findField = new Field(_.merge({
+    parent: self,
+    top: 0,
+    left: 0,
+    right: 0
+  }, Slap.global.options.editor, Slap.global.options.field, self.options.findField));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseForm" id="apidoc.element.slap.BaseForm">
+        function <span class="apidocSignatureSpan">slap.</span>BaseForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseForm(opts) {
+  var self = this;
+
+  if (!(self instanceof BaseForm)) return new BaseForm(opts);
+
+  BaseWidget.call(self, _.merge({
+    hidden: true,
+    height: 1,
+    left: 0,
+    right: 0,
+    bottom: 0
+  }, Slap.global.options.form, opts));
+  if (self.parent instanceof Pane) {
+    self.pane = self.parent;
+    self.pane.forms.push(self);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Button" id="apidoc.element.slap.Button">
+        function <span class="apidocSignatureSpan">slap.</span>Button
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Button(opts) {
+  var self = this;
+
+  if (!(self instanceof Button)) return new Button(opts);
+
+  opts = _.merge({
+    mouse: true,
+    focusable: true,
+    shrink: true,
+    padding: {left: 1, right: 1}
+  }, Slap.global.options.button, opts);
+  opts.style.focus = opts.style.hover;
+  BaseWidget.blessed.Button.call(self, opts);
+  BaseWidget.call(self, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane" id="apidoc.element.slap.EditorPane">
+        function <span class="apidocSignatureSpan">slap.</span>EditorPane
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EditorPane(opts) {
+  var self = this;
+
+  if (!(self instanceof EditorPane)) return new EditorPane(opts);
+
+  Pane.call(self, _.merge({}, Slap.global.options.editorPane, opts));
+
+  self.forms = self.forms || [];
+
+  self.editor = new Editor(_.merge({
+    parent: self,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
+  }, Slap.global.options.editor, self.options.editor));
+
+  self.findForm = new FindForm({parent: self});
+  self.goLineForm = new GoLineForm({parent: self});
+  self.saveAsForm = new SaveAsForm({parent: self});
+  self.saveAsCloseForm = new SaveAsCloseForm({parent: self});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FileBrowser" id="apidoc.element.slap.FileBrowser">
+        function <span class="apidocSignatureSpan">slap.</span>FileBrowser
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileBrowser(opts) {
+  var self = this;
+
+  if (!(self instanceof FileBrowser)) return new FileBrowser(opts);
+
+  opts = _.merge({
+    keys: true,
+    mouse: true,
+    focusable: true
+  }, Slap.global.options.fileBrowser, opts);
+  BaseWidget.blessed.FileManager.call(self, opts);
+  BaseWidget.call(self, opts);
+
+  self.refresh();
+  self.data.selectedStyle = self.style.selected;
+  self.data.itemStyle = self.style.item;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FindForm" id="apidoc.element.slap.FindForm">
+        function <span class="apidocSignatureSpan">slap.</span>FindForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FindForm(opts) {
+  var self = this;
+
+  if (!(self instanceof FindForm)) return new FindForm(opts);
+
+  BaseFindForm.call(self, _.merge({
+    findField: {left: FindForm._label.length}
+  }, Slap.global.options.form.find, opts));
+
+  self.findLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: FindForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: FindForm._label.length,
+    style: self.options.style
+  }, self.options.findLabel));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.GoLineForm" id="apidoc.element.slap.GoLineForm">
+        function <span class="apidocSignatureSpan">slap.</span>GoLineForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GoLineForm(opts) {
+  var self = this;
+
+  if (!(self instanceof GoLineForm)) return new GoLineForm(opts);
+
+  BaseFindForm.call(self, _.merge({
+    findField: {left: GoLineForm._label.length}
+  }, Slap.global.options.form.goLine, opts));
+
+  self.goLineLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: GoLineForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: GoLineForm._label.length,
+    style: self.options.style
+  }, self.options.goLineLabel));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header" id="apidoc.element.slap.Header">
+        function <span class="apidocSignatureSpan">slap.</span>Header
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Header(opts) {
+  var self = this;
+
+  if (!(self instanceof Header)) return new Header(opts);
+
+  BaseWidget.call(self, _.merge(opts.headerPosition !== &#x27;bottom&#x27;
+    ? {top: 0}
+    : {bottom: 0}, {
+    left: 0,
+    right: 0,
+    height: 1
+  }, Slap.global.options.header, opts));
+
+  self.leftContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    left: 1,
+    shrink: true,
+    style: self.options.style
+  }, self.options.leftContent));
+
+  var helpBinding = Slap.global.options.bindings.help;
+  helpBinding = Array.isArray(helpBinding) ? helpBinding[0] : helpBinding;
+  self.helpButton = new Button(_.merge({
+    parent: self,
+    content: &#x22;Help&#x22; + (helpBinding ? &#x22;: &#x22; + helpBinding : &#x22;&#x22;)
+  }, self.options.helpButton));
+
+  self.rightContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    style: self.options.style
+  }, self.options.rightContent));
+
+  self.messageContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    style: self.options.style
+  }, self.options.messageContent));
+
+  // self._blink(true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane" id="apidoc.element.slap.Pane">
+        function <span class="apidocSignatureSpan">slap.</span>Pane
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pane(opts) {
+  var self = this;
+
+  if (!(self instanceof Pane)) return new Pane(opts);
+
+  BaseWidget.call(self, _.merge({
+    top:    Slap.global.header.options.headerPosition === &#x27;top&#x27;    ? 1 : 0,
+    bottom: Slap.global.header.options.headerPosition === &#x27;bottom&#x27; ? 1 : 0,
+    left: 0,
+    right: 0,
+  }, Slap.global.options.pane, opts));
+  self.left = Slap.global.fileBrowser.visible ? Slap.global.fileBrowser.width : 0;
+
+  if (!self.parent.panes) self.parent.panes = [];
+  self.parent.panes.push(self);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList" id="apidoc.element.slap.PaneList">
+        function <span class="apidocSignatureSpan">slap.</span>PaneList
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PaneList(opts) {
+  var self = this;
+
+  if (!(self instanceof PaneList)) return new PaneList(opts);
+
+  Pane.call(self, _.merge({}, Slap.global.options.paneList, opts));
+
+  self.topContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    top: 1,
+    left: &#x27;center&#x27;,
+    style: self.options.style
+  }, self.options.topContent));
+
+  var listOpts = _.merge({
+    parent: self,
+    mouse: true,
+    keys: true,
+    focusable: true,
+    tags: true,
+    top: 3,
+    style: self.options.style
+  }, self.options.list);
+  self.list = new BaseWidget.blessed.List(listOpts);
+  BaseWidget.call(self.list, listOpts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsCloseForm" id="apidoc.element.slap.SaveAsCloseForm">
+        function <span class="apidocSignatureSpan">slap.</span>SaveAsCloseForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SaveAsCloseForm(opts) {
+  var self = this;
+
+  if (!(self instanceof SaveAsCloseForm)) return new SaveAsCloseForm(opts);
+
+  SaveAsForm.call(self, _.merge({}, Slap.global.options.saveAsCloseForm, opts));
+
+  self.discardChangesButton = new Button(_.merge({
+    parent: self,
+    content: &#x22;Discard changes&#x22;,
+    top: 0,
+    right: 0
+  }, Slap.global.options.button.warning, self.options.discardChangesButton));
+
+  self.pathField.right = BaseWidget.prototype.shrinkWidth.call(self.discardChangesButton);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsForm" id="apidoc.element.slap.SaveAsForm">
+        function <span class="apidocSignatureSpan">slap.</span>SaveAsForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SaveAsForm(opts) {
+  var self = this;
+
+  if (!(self instanceof SaveAsForm)) return new SaveAsForm(opts);
+
+  BaseForm.call(self, _.merge({
+    field: {left: SaveAsForm._label.length}
+  }, Slap.global.options.form.saveAs, opts));
+
+  self.saveAsLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: SaveAsForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: SaveAsForm._label.length,
+    style: self.options.style
+  }, self.options.saveAsLabel));
+
+  self.pathField = new Field(_.merge({
+    parent: self,
+    top: 0,
+    left: SaveAsForm._label.length,
+    right: 0
+  }, Slap.global.options.editor, Slap.global.options.field, self.options.pathField));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap" id="apidoc.element.slap.Slap">
+        function <span class="apidocSignatureSpan">slap.</span>Slap
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Slap(opts) {
+  var self = this;
+
+  if (!(self instanceof Slap)) return new Slap(opts);
+
+  if (!Slap.global) Slap.global = this;
+  if (opts.screen &#x26;&#x26; !opts.screen.slap) opts.screen.slap = self;
+  BaseWidget.call(self, opts);
+
+  self.panes = [];
+
+  self.header = new Header({parent: self});
+
+  self.fileBrowser = new FileBrowser({
+    parent: self,
+    top:    self.header.options.headerPosition === &#x27;top&#x27;    ? 1 : 0,
+    bottom: self.header.options.headerPosition === &#x27;bottom&#x27; ? 1 : 0,
+    left: 0
+  });
+  self.fileBrowser.focus();
+
+  self.paneList = new PaneList({parent: self});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.BaseFindForm" id="apidoc.module.slap.BaseFindForm">module slap.BaseFindForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseFindForm.BaseFindForm" id="apidoc.element.slap.BaseFindForm.BaseFindForm">
+        function <span class="apidocSignatureSpan">slap.</span>BaseFindForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseFindForm(opts) {
+  var self = this;
+
+  if (!(self instanceof BaseFindForm)) return new BaseFindForm(opts);
+
+  BaseForm.call(self, _.merge({
+    prevEditorState: {}
+  }, Slap.global.options.form.baseFind, opts));
+
+  self.findField = new Field(_.merge({
+    parent: self,
+    top: 0,
+    left: 0,
+    right: 0
+  }, Slap.global.options.editor, Slap.global.options.field, self.options.findField));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.BaseFindForm.prototype" id="apidoc.module.slap.BaseFindForm.prototype">module slap.BaseFindForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseFindForm.prototype._initHandlers" id="apidoc.element.slap.BaseFindForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var textBuf = self.findField.textBuf;
+  var prevEditorState = self.options.prevEditorState;
+  self.on(&#x27;show&#x27;, function () {
+    var editor = self.pane.editor;
+    if (!prevEditorState.selection) prevEditorState.selection = editor.selection.getRange();
+    if (!prevEditorState.scroll) prevEditorState.scroll = editor.scroll;
+    self.findField.focus();
+    self.find(textBuf.getText());
+  });
+  self.on(&#x27;hide&#x27;, function () {
+    if (!_.some(self.pane.forms, &#x27;visible&#x27;)) {
+      prevEditorState.selection = null;
+      prevEditorState.scroll = null;
+    }
+  });
+
+  textBuf.onDidChange(function () { self.find(textBuf.getText()); });
+
+  return BaseForm.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseFindForm.prototype.find" id="apidoc.element.slap.BaseFindForm.prototype.find">
+        function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>find
+        <span class="apidocSignatureSpan">(text, direction)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (text, direction) {
+  var self = this;
+  self.screen.slap.header.message(null);
+  if (text) self.emit(&#x27;find&#x27;, text, direction);
+  else self.resetEditor();
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var textBuf = self.findField.textBuf;
+var prevEditorState = self.options.prevEditorState;
+self.on(&#x27;show&#x27;, function () {
+  var editor = self.pane.editor;
+  if (!prevEditorState.selection) prevEditorState.selection = editor.selection.getRange();
+  if (!prevEditorState.scroll) prevEditorState.scroll = editor.scroll;
+  self.findField.focus();
+  self.<span class="apidocCodeKeywordSpan">find</span>(textBuf.getText());
+});
+self.on(&#x27;hide&#x27;, function () {
+  if (!_.some(self.pane.forms, &#x27;visible&#x27;)) {
+    prevEditorState.selection = null;
+    prevEditorState.scroll = null;
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseFindForm.prototype.resetEditor" id="apidoc.element.slap.BaseFindForm.prototype.resetEditor">
+        function <span class="apidocSignatureSpan">slap.BaseFindForm.prototype.</span>resetEditor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetEditor = function () {
+  var self = this;
+  var prevEditorState = self.options.prevEditorState;
+  var editor = self.pane.editor;
+  if (prevEditorState.selection) editor.selection.setRange(prevEditorState.selection);
+  if (prevEditorState.scroll) { editor.scroll = prevEditorState.scroll; editor._updateContent(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+BaseFindForm.prototype.__proto__ = BaseForm.prototype;
+
+BaseFindForm.prototype.find = function (text, direction) {
+var self = this;
+self.screen.slap.header.message(null);
+if (text) self.emit(&#x27;find&#x27;, text, direction);
+else self.<span class="apidocCodeKeywordSpan">resetEditor</span>();
+return self;
+};
+BaseFindForm.prototype.resetEditor = function () {
+var self = this;
+var prevEditorState = self.options.prevEditorState;
+var editor = self.pane.editor;
+if (prevEditorState.selection) editor.selection.setRange(prevEditorState.selection);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.BaseForm" id="apidoc.module.slap.BaseForm">module slap.BaseForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseForm.BaseForm" id="apidoc.element.slap.BaseForm.BaseForm">
+        function <span class="apidocSignatureSpan">slap.</span>BaseForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseForm(opts) {
+  var self = this;
+
+  if (!(self instanceof BaseForm)) return new BaseForm(opts);
+
+  BaseWidget.call(self, _.merge({
+    hidden: true,
+    height: 1,
+    left: 0,
+    right: 0,
+    bottom: 0
+  }, Slap.global.options.form, opts));
+  if (self.parent instanceof Pane) {
+    self.pane = self.parent;
+    self.pane.forms.push(self);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.BaseForm.prototype" id="apidoc.module.slap.BaseForm.prototype">module slap.BaseForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseForm.prototype._initHandlers" id="apidoc.element.slap.BaseForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+    switch (self.resolveBinding(key)) {
+      case &#x27;cancel&#x27;: self.cancel(); return false;
+    };
+  });
+  self.on(&#x27;show&#x27;, function () { self.focus(); });
+  self.on(&#x27;hide&#x27;, function () {
+    self.screen.slap._stopKeyPropagation().done();
+    if (self.screen.focused.hasAncestor(self.pane) &#x26;&#x26; !self.screen.slap.focused.visible) self.pane.focus();
+  });
+  self.on(&#x27;element blur&#x27;, function (el) { if (self.visible &#x26;&#x26; !self.hasFocus(true)) self.cancel(); });
+  self.on(&#x27;element submit&#x27;, function (el) { if (el !== self) self.submit(); });
+  self.on(&#x27;element cancel&#x27;, function (el) { if (el !== self) self.cancel(); });
+  self.on(&#x27;cancel&#x27;, function () { self.hide(); });
+
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseForm.prototype.cancel" id="apidoc.element.slap.BaseForm.prototype.cancel">
+        function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>cancel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function () { this.emit(&#x27;cancel&#x27;); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+BaseForm.prototype.cancel = function () { this.emit(&#x27;cancel&#x27;); };
+BaseForm.prototype.submit = function () { this.emit(&#x27;submit&#x27;); };
+BaseForm.prototype._initHandlers = function () {
+var self = this;
+self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+  switch (self.resolveBinding(key)) {
+    case &#x27;cancel&#x27;: self.<span class="apidocCodeKeywordSpan">cancel</span>(); return false;
+  };
+});
+self.on(&#x27;show&#x27;, function () { self.focus(); });
+self.on(&#x27;hide&#x27;, function () {
+  self.screen.slap._stopKeyPropagation().done();
+  if (self.screen.focused.hasAncestor(self.pane) &#x26;&#x26; !self.screen.slap.focused.visible) self.pane.focus();
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.BaseForm.prototype.submit" id="apidoc.element.slap.BaseForm.prototype.submit">
+        function <span class="apidocSignatureSpan">slap.BaseForm.prototype.</span>submit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">submit = function () { this.emit(&#x27;submit&#x27;); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  self.on(&#x27;show&#x27;, function () { self.focus(); });
+  self.on(&#x27;hide&#x27;, function () {
+    self.screen.slap._stopKeyPropagation().done();
+    if (self.screen.focused.hasAncestor(self.pane) &#x26;&#x26; !self.screen.slap.focused.visible) self.pane.focus();
+  });
+  self.on(&#x27;element blur&#x27;, function (el) { if (self.visible &#x26;&#x26; !self.hasFocus(true)) self.cancel(); });
+  self.on(&#x27;element submit&#x27;, function (el) { if (el !== self) self.<span class="apidocCodeKeywordSpan">submit</span>(); });
+  self.on(&#x27;element cancel&#x27;, function (el) { if (el !== self) self.cancel(); });
+  self.on(&#x27;cancel&#x27;, function () { self.hide(); });
+
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+};
+
+module.exports = BaseForm;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Button" id="apidoc.module.slap.Button">module slap.Button</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Button.Button" id="apidoc.element.slap.Button.Button">
+        function <span class="apidocSignatureSpan">slap.</span>Button
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Button(opts) {
+  var self = this;
+
+  if (!(self instanceof Button)) return new Button(opts);
+
+  opts = _.merge({
+    mouse: true,
+    focusable: true,
+    shrink: true,
+    padding: {left: 1, right: 1}
+  }, Slap.global.options.button, opts);
+  opts.style.focus = opts.style.hover;
+  BaseWidget.blessed.Button.call(self, opts);
+  BaseWidget.call(self, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Button.prototype" id="apidoc.module.slap.Button.prototype">module slap.Button.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Button.prototype._initHandlers" id="apidoc.element.slap.Button.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.Button.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  self.on(&#x27;keypress&#x27;, function (ch, key) {
+    if (key.name === &#x27;enter&#x27;) self.screen.slap._stopKeyPropagation().done(); // FIXME: hack
+  });
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.EditorPane" id="apidoc.module.slap.EditorPane">module slap.EditorPane</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.EditorPane" id="apidoc.element.slap.EditorPane.EditorPane">
+        function <span class="apidocSignatureSpan">slap.</span>EditorPane
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EditorPane(opts) {
+  var self = this;
+
+  if (!(self instanceof EditorPane)) return new EditorPane(opts);
+
+  Pane.call(self, _.merge({}, Slap.global.options.editorPane, opts));
+
+  self.forms = self.forms || [];
+
+  self.editor = new Editor(_.merge({
+    parent: self,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
+  }, Slap.global.options.editor, self.options.editor));
+
+  self.findForm = new FindForm({parent: self});
+  self.goLineForm = new GoLineForm({parent: self});
+  self.saveAsForm = new SaveAsForm({parent: self});
+  self.saveAsCloseForm = new SaveAsCloseForm({parent: self});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.EditorPane.prototype" id="apidoc.module.slap.EditorPane.prototype">module slap.EditorPane.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.prototype._initHandlers" id="apidoc.element.slap.EditorPane.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var editor = self.editor;
+  var slap = self.screen.slap;
+
+  self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+    switch (self.resolveBinding(key)) {
+      case &#x27;save&#x27;: if (!editor.readOnly()) editor.textBuf.getPath() ? self.save().done() : self.saveAsForm.show(); return false;
+      case &#x27;saveAs&#x27;: if (!editor.readOnly()) self.saveAsForm.show(); return false;
+      case &#x27;close&#x27;: self.close(); return false;
+      case &#x27;find&#x27;: self.findForm.show(); return false;
+      case &#x27;goLine&#x27;: self.goLineForm.show(); return false;
+    }
+  });
+
+  self.on(&#x27;focus&#x27;, function () {
+    var formHasFocus = false;
+    var visibleForms = self.forms.filter(function (form) {
+      formHasFocus = formHasFocus || form.hasFocus(true);
+      return form.visible;
+    });
+    if (!formHasFocus &#x26;&#x26; visibleForms.length) visibleForms[0].focus();
+  });
+
+  editor.on(&#x27;insertMode&#x27;, function () { self.screen.render(); });
+  [&#x27;onDidChange&#x27;, &#x27;onDidChangePath&#x27;].forEach(function (prop) {
+    editor.textBuf[prop](function () {
+      slap.header.render();
+      slap.paneList.update();
+    });
+  });
+
+  return Pane.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.prototype.close" id="apidoc.element.slap.EditorPane.prototype.close">
+        function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  var self = this;
+  if (self.editor.textBuf.isModified()) {
+    var currentPaneSaveAsCloseForm = (self.screen.slap.getCurrentPane() || {}).saveAsCloseForm || {};
+    if (currentPaneSaveAsCloseForm.visible) {
+      currentPaneSaveAsCloseForm.once(&#x27;hide&#x27;, self.close.bind(self));
+    } else {
+      self.setCurrent();
+      self.saveAsCloseForm.show();
+    }
+    return false;
+  }
+
+  return Pane.prototype.close.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var editor = self.editor;
+var slap = self.screen.slap;
+
+self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+  switch (self.resolveBinding(key)) {
+    case &#x27;save&#x27;: if (!editor.readOnly()) editor.textBuf.getPath() ? self.save().done() : self.saveAsForm.show(); return
+ false;
+    case &#x27;saveAs&#x27;: if (!editor.readOnly()) self.saveAsForm.show(); return false;
+    case &#x27;close&#x27;: self.<span class="apidocCodeKeywordSpan">close</span>(); return false;
+    case &#x27;find&#x27;: self.findForm.show(); return false;
+    case &#x27;goLine&#x27;: self.goLineForm.show(); return false;
+  }
+});
+
+self.on(&#x27;focus&#x27;, function () {
+  var formHasFocus = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.prototype.getTitle" id="apidoc.element.slap.EditorPane.prototype.getTitle">
+        function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>getTitle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTitle = function () {
+  var self = this;
+  var textBuf = self.editor.textBuf;
+  var editorPath = textBuf.getPath();
+  var title = editorPath
+    ? blessed.escape(path.relative(self.screen.slap.fileBrowser.cwd, editorPath))
+    : &#x22;new file&#x22;;
+  if (textBuf.isModified()) {
+    title = util.markup(title+&#x22;*&#x22;, self.style.changed);
+  }
+  return title.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var left = [&#x22;\u270b&#x22;];
+var right = [];
+
+var style = self.options.style;
+var slap = self.screen.slap;
+var pane = slap.getCurrentPane();
+if (pane) {
+  var title = pane.<span class="apidocCodeKeywordSpan">getTitle</span>();
+  if (title !== null) left.push(title);
+  var editor = pane.editor;
+  if (editor) {
+    var cursor = editor.selection.getHeadPosition();
+    var originalEncoding = editor.textBuf.getEncoding();
+    right = [
+      [cursor.row+1, cursor.column+1].join(&#x22;,&#x22;),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.prototype.save" id="apidoc.element.slap.EditorPane.prototype.save">
+        function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>save
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (path) {
+  var self = this;
+  var slap = self.screen.slap;
+  var header = slap.header;
+  var editor = self.editor;
+  return editor.save(path, slap.fileBrowser.cwd)
+    .tap(function () { header.message(&#x22;saved to &#x22; + editor.textBuf.getPath(), &#x27;success&#x27;); })
+    .catch(function (err) {
+      switch ((err.cause || err).code) {
+        case &#x27;EACCES&#x27;: case &#x27;EISDIR&#x27;:
+          header.message(err.message, &#x27;error&#x27;);
+          break;
+        default: throw err;
+      }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+EditorPane.prototype.save = function (path) {
+var self = this;
+var slap = self.screen.slap;
+var header = slap.header;
+var editor = self.editor;
+return editor.<span class="apidocCodeKeywordSpan">save</span>(path, slap.fileBrowser.cwd)
+  .tap(function () { header.message(&#x22;saved to &#x22; + editor.textBuf.getPath(), &#x27;success&#x27;); })
+  .catch(function (err) {
+    switch ((err.cause || err).code) {
+      case &#x27;EACCES&#x27;: case &#x27;EISDIR&#x27;:
+        header.message(err.message, &#x27;error&#x27;);
+        break;
+      default: throw err;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.EditorPane.prototype.setCurrent" id="apidoc.element.slap.EditorPane.prototype.setCurrent">
+        function <span class="apidocSignatureSpan">slap.EditorPane.prototype.</span>setCurrent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCurrent = function () {
+  var self = this;
+  Pane.prototype.setCurrent.apply(self, arguments);
+  self.editor.focus();
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+EditorPane.prototype.close = function () {
+  var self = this;
+  if (self.editor.textBuf.isModified()) {
+    var currentPaneSaveAsCloseForm = (self.screen.slap.getCurrentPane() || {}).saveAsCloseForm || {};
+    if (currentPaneSaveAsCloseForm.visible) {
+      currentPaneSaveAsCloseForm.once(&#x27;hide&#x27;, self.close.bind(self));
+    } else {
+      self.<span class="apidocCodeKeywordSpan">setCurrent</span>();
+      self.saveAsCloseForm.show();
+    }
+    return false;
+  }
+
+  return Pane.prototype.close.apply(self, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.FileBrowser" id="apidoc.module.slap.FileBrowser">module slap.FileBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FileBrowser.FileBrowser" id="apidoc.element.slap.FileBrowser.FileBrowser">
+        function <span class="apidocSignatureSpan">slap.</span>FileBrowser
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileBrowser(opts) {
+  var self = this;
+
+  if (!(self instanceof FileBrowser)) return new FileBrowser(opts);
+
+  opts = _.merge({
+    keys: true,
+    mouse: true,
+    focusable: true
+  }, Slap.global.options.fileBrowser, opts);
+  BaseWidget.blessed.FileManager.call(self, opts);
+  BaseWidget.call(self, opts);
+
+  self.refresh();
+  self.data.selectedStyle = self.style.selected;
+  self.data.itemStyle = self.style.item;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.FileBrowser.prototype" id="apidoc.module.slap.FileBrowser.prototype">module slap.FileBrowser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FileBrowser.prototype._initHandlers" id="apidoc.element.slap.FileBrowser.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.FileBrowser.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var slap = self.screen.slap;
+  self.on(&#x27;element mousedown&#x27;, function (el) { self.focus(); });
+  self.on(&#x27;file&#x27;, function (path) { slap.open(path, true).done(); });
+  self.on(&#x27;cancel&#x27;, function () {
+    var currentPane = slap.getCurrentPane();
+    if (currentPane) currentPane.focus();
+  });
+
+  self.on(&#x27;focus&#x27;, function () {
+    self.style.selected = self.data.selectedStyle;
+    self.screen.program.hideCursor();
+  });
+  self.on(&#x27;blur&#x27;, function () {
+    self.style.selected = self.data.itemStyle;
+  });
+
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.FindForm" id="apidoc.module.slap.FindForm">module slap.FindForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FindForm.FindForm" id="apidoc.element.slap.FindForm.FindForm">
+        function <span class="apidocSignatureSpan">slap.</span>FindForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FindForm(opts) {
+  var self = this;
+
+  if (!(self instanceof FindForm)) return new FindForm(opts);
+
+  BaseFindForm.call(self, _.merge({
+    findField: {left: FindForm._label.length}
+  }, Slap.global.options.form.find, opts));
+
+  self.findLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: FindForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: FindForm._label.length,
+    style: self.options.style
+  }, self.options.findLabel));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.FindForm.prototype" id="apidoc.module.slap.FindForm.prototype">module slap.FindForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FindForm.prototype._initHandlers" id="apidoc.element.slap.FindForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.FindForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var header = self.screen.slap.header;
+  var editor = self.pane.editor;
+  var selection = editor.selection;
+
+  self.on(&#x27;hide&#x27;, function () {
+    editor.destroyMarkers({type: &#x27;findMatch&#x27;});
+    editor._updateContent();
+  });
+  self.on(&#x27;find&#x27;, lodash.throttle(function (pattern, direction) {
+    direction = direction || 0;
+    editor.destroyMarkers({type: &#x27;findMatch&#x27;});
+    try {
+      var regExpMatch = pattern.match(FindForm._regExpRegExp);
+      pattern = new RegExp(regExpMatch[1], regExpMatch[2].replace(&#x27;g&#x27;, &#x27;&#x27;) + &#x27;g&#x27;);
+    } catch (e) {
+      if (e.message.match(FindForm._invalidRegExpMessageRegExp)) {
+        header.message(e.message, &#x27;error&#x27;);
+        self.resetEditor();
+        return;
+      }
+      pattern = new RegExp(_.escapeRegExp(pattern), &#x27;img&#x27;);
+    }
+
+    var selectionRange = selection.getRange();
+    var matches = [];
+    editor.textBuf[direction === -1
+      ? &#x27;backwardsScan&#x27;
+      : &#x27;scan&#x27;](pattern, function (match) {
+      matches.push(match);
+      editor.textBuf.markRange(match.range, {type: &#x27;findMatch&#x27;});
+    });
+
+    if (!matches.length) {
+      header.message(&#x22;no matches&#x22;, &#x27;warning&#x27;);
+      self.resetEditor();
+      return;
+    }
+    if (!matches.some(function (match) {
+      var matchRange = match.range;
+      var cmp = matchRange.start.compare(selectionRange.start);
+      if (cmp === direction) {
+        self.selectRange(matchRange);
+        return true;
+      } else if (!cmp &#x26;&#x26; matches.length === 1) {
+        header.message(&#x22;this is the only occurrence&#x22;, &#x27;info&#x27;);
+        return true;
+      }
+    })) {
+      header.message(&#x22;search wrapped&#x22;, &#x27;info&#x27;);
+      self.selectRange(matches[0].range);
+    }
+    editor._updateContent();
+  }, self.options.perf.findThrottle));
+
+  self.findField.on(&#x27;keypress&#x27;, function (ch, key) {
+    var text = self.findField.textBuf.getText();
+    switch (self.resolveBinding(key)) {
+      case &#x27;next&#x27;: self.find(text, 1); return false;
+      case &#x27;prev&#x27;: self.find(text, -1); return false;
+    };
+  });
+
+  return BaseFindForm.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.FindForm.prototype.selectRange" id="apidoc.element.slap.FindForm.prototype.selectRange">
+        function <span class="apidocSignatureSpan">slap.FindForm.prototype.</span>selectRange
+        <span class="apidocSignatureSpan">(range)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">selectRange = function (range) {
+  var self = this;
+  var editor = self.pane.editor;
+  var selection = editor.selection;
+  selection.setRange(range);
+  var visibleRange = editor.visiblePos(range);
+  editor.clipScroll([visibleRange.start, visibleRange.end]);
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self.resetEditor();
+  return;
+}
+if (!matches.some(function (match) {
+  var matchRange = match.range;
+  var cmp = matchRange.start.compare(selectionRange.start);
+  if (cmp === direction) {
+    self.<span class="apidocCodeKeywordSpan">selectRange</span>(matchRange);
+    return true;
+  } else if (!cmp &#x26;&#x26; matches.length === 1) {
+    header.message(&#x22;this is the only occurrence&#x22;, &#x27;info&#x27;);
+    return true;
+  }
+})) {
+  header.message(&#x22;search wrapped&#x22;, &#x27;info&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.GoLineForm" id="apidoc.module.slap.GoLineForm">module slap.GoLineForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.GoLineForm.GoLineForm" id="apidoc.element.slap.GoLineForm.GoLineForm">
+        function <span class="apidocSignatureSpan">slap.</span>GoLineForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GoLineForm(opts) {
+  var self = this;
+
+  if (!(self instanceof GoLineForm)) return new GoLineForm(opts);
+
+  BaseFindForm.call(self, _.merge({
+    findField: {left: GoLineForm._label.length}
+  }, Slap.global.options.form.goLine, opts));
+
+  self.goLineLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: GoLineForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: GoLineForm._label.length,
+    style: self.options.style
+  }, self.options.goLineLabel));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.GoLineForm.prototype" id="apidoc.module.slap.GoLineForm.prototype">module slap.GoLineForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.GoLineForm.prototype._initHandlers" id="apidoc.element.slap.GoLineForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.GoLineForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+
+  self.findField.on(&#x27;keypress&#x27;, function (ch, key) {
+    var lineNumber = self.findField.textBuf.getText();
+    switch (self.resolveBinding(key)) {
+      // Use setTimeout as a horrible hack to prevent
+      // the keypress from being transferred to the editor,
+      // causing an unintentional extra linebreak.
+      case &#x27;next&#x27;:   setTimeout(function(){ self.find(lineNumber, 1) }, 1); return false;
+      case &#x27;submit&#x27;: setTimeout(function(){ self.find(lineNumber, 1) }, 1); return false;
+    };
+  });
+
+  self.on(&#x27;cancel&#x27;, function () { self.resetEditor(); });
+  self.on(&#x27;show&#x27;, function () { self.findField.textBuf.setText(&#x27;&#x27;); });
+  self.on(&#x27;find&#x27;, function (lineNumber, direction) {
+    lineNumber = Number(lineNumber) - 1;
+    if (lineNumber !== lineNumber) return; // isNaN(lineNumber)
+    var selection = self.pane.editor.selection;
+    selection.setHeadPosition([lineNumber, 0]);
+    selection.clearTail();
+    if (direction) self.hide();
+    return self;
+  });
+  return BaseFindForm.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Header" id="apidoc.module.slap.Header">module slap.Header</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header.Header" id="apidoc.element.slap.Header.Header">
+        function <span class="apidocSignatureSpan">slap.</span>Header
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Header(opts) {
+  var self = this;
+
+  if (!(self instanceof Header)) return new Header(opts);
+
+  BaseWidget.call(self, _.merge(opts.headerPosition !== &#x27;bottom&#x27;
+    ? {top: 0}
+    : {bottom: 0}, {
+    left: 0,
+    right: 0,
+    height: 1
+  }, Slap.global.options.header, opts));
+
+  self.leftContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    left: 1,
+    shrink: true,
+    style: self.options.style
+  }, self.options.leftContent));
+
+  var helpBinding = Slap.global.options.bindings.help;
+  helpBinding = Array.isArray(helpBinding) ? helpBinding[0] : helpBinding;
+  self.helpButton = new Button(_.merge({
+    parent: self,
+    content: &#x22;Help&#x22; + (helpBinding ? &#x22;: &#x22; + helpBinding : &#x22;&#x22;)
+  }, self.options.helpButton));
+
+  self.rightContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    style: self.options.style
+  }, self.options.rightContent));
+
+  self.messageContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    style: self.options.style
+  }, self.options.messageContent));
+
+  // self._blink(true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Header.prototype" id="apidoc.module.slap.Header.prototype">module slap.Header.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header.prototype._blink" id="apidoc.element.slap.Header.prototype._blink">
+        function <span class="apidocSignatureSpan">slap.Header.prototype.</span>_blink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_blink = function () {
+  if (arguments.length) {
+    var newVal = setter.apply(this, arguments);
+    this.data[name] = newVal;
+    this.emit &#x26;&#x26; this.emit(name, getter.call(this, newVal));
+    return this;
+  } else {
+    return getter.call(this, this.data[name]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self.messageContent = new BaseWidget(_.merge({
+  parent: self,
+  tags: true,
+  shrink: true,
+  style: self.options.style
+}, self.options.messageContent));
+
+// self.<span class="apidocCodeKeywordSpan">_blink</span>(true);
+}
+Header.prototype.__proto__ = BaseWidget.prototype;
+
+Header.prototype._blink = util.getterSetter(&#x27;blink&#x27;, null, function (blink) {
+var self = this;
+clearTimeout(self.data.blinkTimer);
+if (self.options.blinkRate) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header.prototype._initHandlers" id="apidoc.element.slap.Header.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.Header.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  [&#x27;message&#x27;, &#x27;blink&#x27;].forEach(function (evt) {
+    self.on(evt, function () { self.screen.render(); });
+  });
+  self.helpButton.on(&#x27;press&#x27;, function () { self.screen.slap.help(); });
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header.prototype.message" id="apidoc.element.slap.Header.prototype.message">
+        function <span class="apidocSignatureSpan">slap.Header.prototype.</span>message
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message = function () {
+  if (arguments.length) {
+    var newVal = setter.apply(this, arguments);
+    this.data[name] = newVal;
+    this.emit &#x26;&#x26; this.emit(name, getter.call(this, newVal));
+    return this;
+  } else {
+    return getter.call(this, this.data[name]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  right: 0
+}, Slap.global.options.editor, Slap.global.options.field, self.options.findField));
+}
+BaseFindForm.prototype.__proto__ = BaseForm.prototype;
+
+BaseFindForm.prototype.find = function (text, direction) {
+var self = this;
+self.screen.slap.header.<span class="apidocCodeKeywordSpan">message</span>(null);
+if (text) self.emit(&#x27;find&#x27;, text, direction);
+else self.resetEditor();
+return self;
+};
+BaseFindForm.prototype.resetEditor = function () {
+var self = this;
+var prevEditorState = self.options.prevEditorState;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Header.prototype.render" id="apidoc.element.slap.Header.prototype.render">
+        function <span class="apidocSignatureSpan">slap.Header.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+  var self = this;
+
+  var left = [&#x22;\u270b&#x22;];
+  var right = [];
+
+  var style = self.options.style;
+  var slap = self.screen.slap;
+  var pane = slap.getCurrentPane();
+  if (pane) {
+    var title = pane.getTitle();
+    if (title !== null) left.push(title);
+    var editor = pane.editor;
+    if (editor) {
+      var cursor = editor.selection.getHeadPosition();
+      var originalEncoding = editor.textBuf.getEncoding();
+      right = [
+        [cursor.row+1, cursor.column+1].join(&#x22;,&#x22;),
+        &#x22;(&#x22;+editor.textBuf.getLineCount()+&#x22;)&#x22;
+      ];
+      if (originalEncoding) right.push(blessed.escape(originalEncoding));
+      if (editor.readOnly()) right.push(util.markup(&#x22;read-only&#x22;, style.warning));
+      if (!editor.insertMode()) right.unshift(util.markup(&#x22;OVR&#x22;, style.overwrite));
+    }
+  }
+
+  self.leftContent.setContent(left.join(&#x22; &#x22;));
+  self.rightContent.setContent(right.join(&#x22; &#x22;));
+
+  var message = self.message() || &#x22;&#x22;;
+  if (self._blink()) message = util.markup(message, style.blinkStyle);
+  self.messageContent.setContent(message.toString());
+
+  // float: right basically
+  [&#x27;helpButton&#x27;, &#x27;rightContent&#x27;, &#x27;messageContent&#x27;].reduce(function (right, key) {
+    self[key].right = right;
+    return 2 + right + BaseWidget.prototype.shrinkWidth.call(self[key]);
+  }, 1);
+
+  return BaseWidget.prototype.render.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var visibleForms = self.forms.filter(function (form) {
+    formHasFocus = formHasFocus || form.hasFocus(true);
+    return form.visible;
+  });
+  if (!formHasFocus &#x26;&#x26; visibleForms.length) visibleForms[0].focus();
+});
+
+editor.on(&#x27;insertMode&#x27;, function () { self.screen.<span class="apidocCodeKeywordSpan">render</span>(); });
+[&#x27;onDidChange&#x27;, &#x27;onDidChangePath&#x27;].forEach(function (prop) {
+  editor.textBuf[prop](function () {
+    slap.header.render();
+    slap.paneList.update();
+  });
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Pane" id="apidoc.module.slap.Pane">module slap.Pane</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane.Pane" id="apidoc.element.slap.Pane.Pane">
+        function <span class="apidocSignatureSpan">slap.</span>Pane
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pane(opts) {
+  var self = this;
+
+  if (!(self instanceof Pane)) return new Pane(opts);
+
+  BaseWidget.call(self, _.merge({
+    top:    Slap.global.header.options.headerPosition === &#x27;top&#x27;    ? 1 : 0,
+    bottom: Slap.global.header.options.headerPosition === &#x27;bottom&#x27; ? 1 : 0,
+    left: 0,
+    right: 0,
+  }, Slap.global.options.pane, opts));
+  self.left = Slap.global.fileBrowser.visible ? Slap.global.fileBrowser.width : 0;
+
+  if (!self.parent.panes) self.parent.panes = [];
+  self.parent.panes.push(self);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Pane.prototype" id="apidoc.module.slap.Pane.prototype">module slap.Pane.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane.prototype._initHandlers" id="apidoc.element.slap.Pane.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+
+  self.on(&#x27;close&#x27;, function () { self.screen.slap.header.message(null); });
+
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane.prototype.close" id="apidoc.element.slap.Pane.prototype.close">
+        function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  var self = this;
+
+  var slap = self.screen.slap;
+  var paneIndex = slap.panes.indexOf(self);
+  if (paneIndex !== -1) slap.panes.splice(paneIndex, 1);
+
+  self.emit(&#x27;close&#x27;, paneIndex);
+  self.detach();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var editor = self.editor;
+var slap = self.screen.slap;
+
+self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+  switch (self.resolveBinding(key)) {
+    case &#x27;save&#x27;: if (!editor.readOnly()) editor.textBuf.getPath() ? self.save().done() : self.saveAsForm.show(); return
+ false;
+    case &#x27;saveAs&#x27;: if (!editor.readOnly()) self.saveAsForm.show(); return false;
+    case &#x27;close&#x27;: self.<span class="apidocCodeKeywordSpan">close</span>(); return false;
+    case &#x27;find&#x27;: self.findForm.show(); return false;
+    case &#x27;goLine&#x27;: self.goLineForm.show(); return false;
+  }
+});
+
+self.on(&#x27;focus&#x27;, function () {
+  var formHasFocus = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane.prototype.getTitle" id="apidoc.element.slap.Pane.prototype.getTitle">
+        function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>getTitle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTitle = function () {
+  return &#x22;Untitled pane&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var left = [&#x22;\u270b&#x22;];
+var right = [];
+
+var style = self.options.style;
+var slap = self.screen.slap;
+var pane = slap.getCurrentPane();
+if (pane) {
+  var title = pane.<span class="apidocCodeKeywordSpan">getTitle</span>();
+  if (title !== null) left.push(title);
+  var editor = pane.editor;
+  if (editor) {
+    var cursor = editor.selection.getHeadPosition();
+    var originalEncoding = editor.textBuf.getEncoding();
+    right = [
+      [cursor.row+1, cursor.column+1].join(&#x22;,&#x22;),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Pane.prototype.setCurrent" id="apidoc.element.slap.Pane.prototype.setCurrent">
+        function <span class="apidocSignatureSpan">slap.Pane.prototype.</span>setCurrent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCurrent = function () {
+  var self = this;
+  var slap = self.screen.slap;
+  var panes = slap.panes;
+  var paneIndex = panes.indexOf(self);
+  if (paneIndex === -1) { paneIndex = panes.length; panes.push(self); }
+  slap.data.prevPane = slap.data.currentPane;
+  slap.data.currentPane = paneIndex;
+  self.focus();
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+EditorPane.prototype.close = function () {
+  var self = this;
+  if (self.editor.textBuf.isModified()) {
+    var currentPaneSaveAsCloseForm = (self.screen.slap.getCurrentPane() || {}).saveAsCloseForm || {};
+    if (currentPaneSaveAsCloseForm.visible) {
+      currentPaneSaveAsCloseForm.once(&#x27;hide&#x27;, self.close.bind(self));
+    } else {
+      self.<span class="apidocCodeKeywordSpan">setCurrent</span>();
+      self.saveAsCloseForm.show();
+    }
+    return false;
+  }
+
+  return Pane.prototype.close.apply(self, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.PaneList" id="apidoc.module.slap.PaneList">module slap.PaneList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList.PaneList" id="apidoc.element.slap.PaneList.PaneList">
+        function <span class="apidocSignatureSpan">slap.</span>PaneList
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PaneList(opts) {
+  var self = this;
+
+  if (!(self instanceof PaneList)) return new PaneList(opts);
+
+  Pane.call(self, _.merge({}, Slap.global.options.paneList, opts));
+
+  self.topContent = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    shrink: true,
+    top: 1,
+    left: &#x27;center&#x27;,
+    style: self.options.style
+  }, self.options.topContent));
+
+  var listOpts = _.merge({
+    parent: self,
+    mouse: true,
+    keys: true,
+    focusable: true,
+    tags: true,
+    top: 3,
+    style: self.options.style
+  }, self.options.list);
+  self.list = new BaseWidget.blessed.List(listOpts);
+  BaseWidget.call(self.list, listOpts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.PaneList.prototype" id="apidoc.module.slap.PaneList.prototype">module slap.PaneList.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList.prototype._initHandlers" id="apidoc.element.slap.PaneList.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var slap = self.screen.slap;
+
+  self.on(&#x27;element mousedown&#x27;, function (el) { self.focus(); });
+
+  slap.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+    if (!(el === self || el.hasAncestor(self))) return;
+    switch (self.resolveBinding(key)) {
+      case &#x27;cancel&#x27;:
+        var prevPane = slap.getPrevPane();
+        if (prevPane) prevPane.setCurrent();
+        return false;
+    }
+  });
+
+  self.on(&#x27;focus&#x27;, function () { self.screen.program.hideCursor(); });
+
+  self.update();
+  [&#x27;adopt&#x27;, &#x27;remove&#x27;].forEach(function (evt) {
+    slap.on(&#x27;element &#x27;+evt, function (parent, child) {
+      if (child instanceof Pane) setImmediate(function () { self.update(); });
+    });
+  });
+
+  self.list.on(&#x27;select&#x27;, function (_, i) {
+    slap._stopKeyPropagation().then(function () {
+      slap.panes[i].setCurrent();
+    });
+  });
+
+  return Pane.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList.prototype.close" id="apidoc.element.slap.PaneList.prototype.close">
+        function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  // Don&#x27;t actually close anything, just act closed and maybe setFront another pane
+  var self = this;
+  var slap = self.screen.slap;
+  if (self === slap.getCurrentPane()) {
+    var prevPane = slap.getPrevPane();
+    if (prevPane) prevPane.setCurrent();
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var editor = self.editor;
+var slap = self.screen.slap;
+
+self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+  switch (self.resolveBinding(key)) {
+    case &#x27;save&#x27;: if (!editor.readOnly()) editor.textBuf.getPath() ? self.save().done() : self.saveAsForm.show(); return
+ false;
+    case &#x27;saveAs&#x27;: if (!editor.readOnly()) self.saveAsForm.show(); return false;
+    case &#x27;close&#x27;: self.<span class="apidocCodeKeywordSpan">close</span>(); return false;
+    case &#x27;find&#x27;: self.findForm.show(); return false;
+    case &#x27;goLine&#x27;: self.goLineForm.show(); return false;
+  }
+});
+
+self.on(&#x27;focus&#x27;, function () {
+  var formHasFocus = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList.prototype.getTitle" id="apidoc.element.slap.PaneList.prototype.getTitle">
+        function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>getTitle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTitle = function () {
+  return util.markup(&#x22;&#x3c;PaneList&#x3e;&#x22;, this.style.paneList).toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var left = [&#x22;\u270b&#x22;];
+var right = [];
+
+var style = self.options.style;
+var slap = self.screen.slap;
+var pane = slap.getCurrentPane();
+if (pane) {
+  var title = pane.<span class="apidocCodeKeywordSpan">getTitle</span>();
+  if (title !== null) left.push(title);
+  var editor = pane.editor;
+  if (editor) {
+    var cursor = editor.selection.getHeadPosition();
+    var originalEncoding = editor.textBuf.getEncoding();
+    right = [
+      [cursor.row+1, cursor.column+1].join(&#x22;,&#x22;),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.PaneList.prototype.update" id="apidoc.element.slap.PaneList.prototype.update">
+        function <span class="apidocSignatureSpan">slap.PaneList.prototype.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function () {
+  var self = this;
+  var slap = self.screen.slap;
+
+  var list = self.list;
+  var items = slap.panes.reduce(function (items, pane) {
+    var title = pane.getTitle();
+    if (title !== null) items.push(title);
+    return items;
+  }, []);
+  list.setItems(items);
+
+  var topContent = self.topContent;
+  topContent.setContent(items.length+&#x22; pane&#x22;+(items.length === 1 ? &#x27;&#x27; : &#x27;s&#x27;)+&#x22; open&#x22;);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (!formHasFocus &#x26;&#x26; visibleForms.length) visibleForms[0].focus();
+  });
+
+  editor.on(&#x27;insertMode&#x27;, function () { self.screen.render(); });
+  [&#x27;onDidChange&#x27;, &#x27;onDidChangePath&#x27;].forEach(function (prop) {
+    editor.textBuf[prop](function () {
+      slap.header.render();
+      slap.paneList.<span class="apidocCodeKeywordSpan">update</span>();
+    });
+  });
+
+  return Pane.prototype._initHandlers.apply(self, arguments);
+};
+
+module.exports = EditorPane;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.SaveAsCloseForm" id="apidoc.module.slap.SaveAsCloseForm">module slap.SaveAsCloseForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsCloseForm.SaveAsCloseForm" id="apidoc.element.slap.SaveAsCloseForm.SaveAsCloseForm">
+        function <span class="apidocSignatureSpan">slap.</span>SaveAsCloseForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SaveAsCloseForm(opts) {
+  var self = this;
+
+  if (!(self instanceof SaveAsCloseForm)) return new SaveAsCloseForm(opts);
+
+  SaveAsForm.call(self, _.merge({}, Slap.global.options.saveAsCloseForm, opts));
+
+  self.discardChangesButton = new Button(_.merge({
+    parent: self,
+    content: &#x22;Discard changes&#x22;,
+    top: 0,
+    right: 0
+  }, Slap.global.options.button.warning, self.options.discardChangesButton));
+
+  self.pathField.right = BaseWidget.prototype.shrinkWidth.call(self.discardChangesButton);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.SaveAsCloseForm.prototype" id="apidoc.module.slap.SaveAsCloseForm.prototype">module slap.SaveAsCloseForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsCloseForm.prototype._initHandlers" id="apidoc.element.slap.SaveAsCloseForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.SaveAsCloseForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  self.on(&#x27;show&#x27;, function () { self.screen.slap.header.message(&#x22;unsaved changes, please save or discard&#x22;, &#x27;warning&#x27;); });
+  self.on(&#x27;save&#x27;, function () { self.pane.close(); });
+  self.on(&#x27;discardChanges&#x27;, function () {
+    self.pane.editor.textBuf.reload();
+    self.pane.close();
+  });
+  self.discardChangesButton.on(&#x27;press&#x27;, function () { self.emit(&#x27;discardChanges&#x27;); });
+  return SaveAsForm.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.SaveAsForm" id="apidoc.module.slap.SaveAsForm">module slap.SaveAsForm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsForm.SaveAsForm" id="apidoc.element.slap.SaveAsForm.SaveAsForm">
+        function <span class="apidocSignatureSpan">slap.</span>SaveAsForm
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SaveAsForm(opts) {
+  var self = this;
+
+  if (!(self instanceof SaveAsForm)) return new SaveAsForm(opts);
+
+  BaseForm.call(self, _.merge({
+    field: {left: SaveAsForm._label.length}
+  }, Slap.global.options.form.saveAs, opts));
+
+  self.saveAsLabel = new BaseWidget(_.merge({
+    parent: self,
+    tags: true,
+    content: SaveAsForm._label,
+    top: 0,
+    height: 1,
+    left: 0,
+    width: SaveAsForm._label.length,
+    style: self.options.style
+  }, self.options.saveAsLabel));
+
+  self.pathField = new Field(_.merge({
+    parent: self,
+    top: 0,
+    left: SaveAsForm._label.length,
+    right: 0
+  }, Slap.global.options.editor, Slap.global.options.field, self.options.pathField));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.SaveAsForm.prototype" id="apidoc.module.slap.SaveAsForm.prototype">module slap.SaveAsForm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.SaveAsForm.prototype._initHandlers" id="apidoc.element.slap.SaveAsForm.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.SaveAsForm.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  self.on(&#x27;show&#x27;, function () {
+    self.pathField.textBuf.setText(self.pane.editor.textBuf.getPath() || &#x27;&#x27;);
+    self.pathField.selection.setHeadPosition([0, Infinity]);
+    self.pathField.focus();
+  });
+  self.on(&#x27;submit&#x27;, function () {
+    var path = self.pathField.textBuf.getText();
+    if (!path) {
+      self.screen.slap.header.message(&#x22;couldn&#x27;t save, no filename passed&#x22;, &#x27;error&#x27;);
+      return;
+    }
+    self.pane.save(path).done(function (newPath) {
+      if (newPath) {
+        self.hide();
+        self.emit(&#x27;save&#x27;, newPath);
+      }
+    });
+  });
+  return BaseForm.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Slap" id="apidoc.module.slap.Slap">module slap.Slap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.Slap" id="apidoc.element.slap.Slap.Slap">
+        function <span class="apidocSignatureSpan">slap.</span>Slap
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Slap(opts) {
+  var self = this;
+
+  if (!(self instanceof Slap)) return new Slap(opts);
+
+  if (!Slap.global) Slap.global = this;
+  if (opts.screen &#x26;&#x26; !opts.screen.slap) opts.screen.slap = self;
+  BaseWidget.call(self, opts);
+
+  self.panes = [];
+
+  self.header = new Header({parent: self});
+
+  self.fileBrowser = new FileBrowser({
+    parent: self,
+    top:    self.header.options.headerPosition === &#x27;top&#x27;    ? 1 : 0,
+    bottom: self.header.options.headerPosition === &#x27;bottom&#x27; ? 1 : 0,
+    left: 0
+  });
+  self.fileBrowser.focus();
+
+  self.paneList = new PaneList({parent: self});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.getUserDir" id="apidoc.element.slap.Slap.getUserDir">
+        function <span class="apidocSignatureSpan">slap.Slap.</span>getUserDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserDir = function () {
+  var userDir = util.resolvePath(&#x27;~/.&#x27; + require(&#x27;../../package&#x27;).name);
+  return mkdirp(userDir).return(userDir);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return BaseWidget.prototype._initHandlers.apply(self, arguments);
+};
+
+Slap.prototype._initPlugins = function () {
+var self = this;
+
+return Slap.<span class="apidocCodeKeywordSpan">getUserDir</span>().then(function (userDir) {
+    return clap({
+      val: self,
+      module: require.main,
+      keyword: &#x27;slap-plugin&#x27;,
+      paths: [path.join(userDir, &#x27;plugins&#x27;)]
+    });
+  })
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slap.Slap.prototype" id="apidoc.module.slap.Slap.prototype">module slap.Slap.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype._initHandlers" id="apidoc.element.slap.Slap.prototype._initHandlers">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_initHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initHandlers = function () {
+  var self = this;
+  var panes = self.panes;
+
+  self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+    var binding = self.resolveBinding(key);
+
+    var logLine = &#x22;keypress &#x22; + key.full;
+    if (key.full !== key.sequence) logLine += &#x22; [raw: &#x22; + JSON.stringify(key.sequence) + &#x22;]&#x22;;
+    var focused = {parent: self.screen.focused}, focusedBinding;
+    while ((focused = focused.parent) &#x26;&#x26; !(focusedBinding = BaseWidget.prototype.resolveBinding.call(focused, key)));
+    if (focusedBinding) logLine += &#x22; (bound to &#x22;+focusedBinding+&#x22; on &#x22;+util.typeOf(focused) + &#x22;)&#x22;;
+    util.logger.silly(logLine);
+
+    switch (binding) {
+      case &#x27;new&#x27;: new EditorPane({parent: self}).setCurrent(); return false;
+      case &#x27;open&#x27;:
+        if (!self.fileBrowser.visible) {
+          self.fileBrowser.show();
+          panes.forEach(function (pane) {
+            pane.left = self.fileBrowser.width;
+            pane.editor._updateContent();
+          });
+        }
+        self.fileBrowser.focus();
+        return false;
+      case &#x27;nextPane&#x27;: panes[util.mod(self.data.currentPane + 1, panes.length)].setCurrent(); return false;
+      case &#x27;prevPane&#x27;: panes[util.mod(self.data.currentPane - 1, panes.length)].setCurrent(); return false;
+      case &#x27;togglePaneList&#x27;:
+        if (self.paneList !== self.getCurrentPane()) self.paneList.setCurrent();
+        else self.paneList.close();
+        return false;
+      case &#x27;toggleFileBrowser&#x27;:
+        self.fileBrowser.toggle();
+        panes.forEach(function (pane) {
+          pane.left = self.fileBrowser.visible ? self.fileBrowser.width : 0;
+          pane.editor._updateContent();
+        });
+        return false;
+      case &#x27;quit&#x27;:
+        if (!self._panesBlockingQuit) {
+          var currentPane = self.getCurrentPane();
+          if (currentPane) currentPane.close(); // ensures panes[0] doesn&#x27;t steal focus
+          self._panesBlockingQuit = panes.slice().filter(function (pane) {
+            if (!pane.close()) {
+              pane.once(&#x27;close&#x27;, function () {
+                if (self._panesBlockingQuit) {
+                  self._panesBlockingQuit.splice(self._panesBlockingQuit.indexOf(pane), 1);
+                  if (self._panesBlockingQuit.length) {
+                    self.getCurrentPane().saveAsCloseForm.show();
+                  } else {
+                    self.quit();
+                  }
+                }
+              });
+              pane.saveAsCloseForm.once(&#x27;cancel&#x27;, function () {
+                self._panesBlockingQuit.forEach(function (blockingPane) { blockingPane.saveAsCloseForm.hide(); });
+                self._panesBlockingQuit = null;
+              });
+              return true;
+            }
+          });
+          var numPanesBlockingQuit = self._panesBlockingQuit.length;
+          if (numPanesBlockingQuit &#x3e; 1) {
+            self.header.message(numPanesBlockingQuit + &#x22; unsaved file&#x22; + (numPanesBlockingQuit !== 1 ? &#x22;s&#x22; : &#x22;&#x22;) + &#x22;, please save
+ or discard&#x22;, &#x27;warning&#x27;);
+          } else if (!numPanesBlockingQuit) {
+            self.quit();
+          }
+        }
+        return false;
+      case &#x27;help&#x27;: self.help(); return false;
+    }
+  });
+
+  self.on(&#x27;mouse&#x27;, function (mouseData) { util.logger.silly(&#x22;mouse&#x22;, mouseData); });
+
+  self.on(&#x27;element focus&#x27;, function (el) { el.setFront(); self.screen.render(); });
+
+  [&#x27;element blur&#x27;, &#x27;element focus&#x27;].forEach(function (evt) {
+    self.on(evt, function (el) {
+      if (el._updateCursor) el._updateCursor();
+    });
+  });
+
+  self.on(&#x27;element show&#x27;, function (el) { if (el instanceof Pane) self.header.render(); });
+
+  [&#x27;resize&#x27;, &#x27;element focus&#x27;].forEach(function (evt) {
+    self.on(evt, function () { self.screen.render(); });
+  });
+
+  self.on(&#x27;element close&#x27;, _.debounce(function (el, i) {
+    if (!(el instanceof Pane)) return;
+
+    var nextPane = self.panes[Math.min(i, panes.length - 1)];
+    if (nextPane &#x26;&#x26; nextPane.isAttached()) nextPane.setCurrent();
+  }));
+
+  self.ready.call(&#x27;_initPlugins&#x27;).done();
+
+  return BaseWidget.prototype._initHandlers.apply(self, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype._initPlugins" id="apidoc.element.slap.Slap.prototype._initPlugins">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_initPlugins
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initPlugins = function () {
+  var self = this;
+
+  return Slap.getUserDir().then(function (userDir) {
+      return clap({
+        val: self,
+        module: require.main,
+        keyword: &#x27;slap-plugin&#x27;,
+        paths: [path.join(userDir, &#x27;plugins&#x27;)]
+      });
+    })
+    .map(function (obj) {
+      return obj.promise
+        .then(function () { util.logger.info(&#x22;loaded plugin &#x22;+obj.plugin); })
+        .catch(function (err) { util.logger.error(&#x22;failed loading plugin &#x22;+obj.plugin+&#x22;: &#x22;+(err.stack || err)); });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype._stopKeyPropagation" id="apidoc.element.slap.Slap.prototype._stopKeyPropagation">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>_stopKeyPropagation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stopKeyPropagation = function () {
+  // FIXME: ugly hack to stop enter from last keypress from propagating too far
+  var self = this;
+  self.lockKeys = true;
+  return Promise.delay(0).then(function () { self.lockKeys = false; });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self.on(&#x27;element keypress&#x27;, function (el, ch, key) {
+  switch (self.resolveBinding(key)) {
+    case &#x27;cancel&#x27;: self.cancel(); return false;
+  };
+});
+self.on(&#x27;show&#x27;, function () { self.focus(); });
+self.on(&#x27;hide&#x27;, function () {
+  self.screen.slap.<span class="apidocCodeKeywordSpan">_stopKeyPropagation</span>().done();
+  if (self.screen.focused.hasAncestor(self.pane) &#x26;&#x26; !self.screen.slap.focused.visible) self.pane.focus();
+});
+self.on(&#x27;element blur&#x27;, function (el) { if (self.visible &#x26;&#x26; !self.hasFocus(true)) self.cancel(); });
+self.on(&#x27;element submit&#x27;, function (el) { if (el !== self) self.submit(); });
+self.on(&#x27;element cancel&#x27;, function (el) { if (el !== self) self.cancel(); });
+self.on(&#x27;cancel&#x27;, function () { self.hide(); });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.getCurrentPane" id="apidoc.element.slap.Slap.prototype.getCurrentPane">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>getCurrentPane
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentPane = function () {
+  return this.panes[this.data.currentPane];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return title.toString();
+};
+
+EditorPane.prototype.close = function () {
+var self = this;
+if (self.editor.textBuf.isModified()) {
+  var currentPaneSaveAsCloseForm = (self.screen.slap.<span class="apidocCodeKeywordSpan">getCurrentPane</span>() || {}).saveAsCloseForm
+ || {};
+  if (currentPaneSaveAsCloseForm.visible) {
+    currentPaneSaveAsCloseForm.once(&#x27;hide&#x27;, self.close.bind(self));
+  } else {
+    self.setCurrent();
+    self.saveAsCloseForm.show();
+  }
+  return false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.getPrevPane" id="apidoc.element.slap.Slap.prototype.getPrevPane">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>getPrevPane
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPrevPane = function () {
+  return this.panes[this.data.prevPane];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+PaneList.prototype.close = function () {
+// Don&#x27;t actually close anything, just act closed and maybe setFront another pane
+var self = this;
+var slap = self.screen.slap;
+if (self === slap.getCurrentPane()) {
+  var prevPane = slap.<span class="apidocCodeKeywordSpan">getPrevPane</span>();
+  if (prevPane) prevPane.setCurrent();
+}
+return true;
+};
+
+PaneList.prototype.getTitle = function () {
+return util.markup(&#x22;&#x3c;PaneList&#x3e;&#x22;, this.style.paneList).toString();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.help" id="apidoc.element.slap.Slap.prototype.help">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>help
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">help = function () {
+  return this
+    .open(path.join(__dirname, &#x27;..&#x27;, &#x27;..&#x27;, &#x27;README.md&#x27;), true)
+    .tap(function (pane) {
+      var editor = pane.editor;
+      editor.readOnly(true);
+      editor.textBuf.scan(/^Usage/, function (match) {
+        var start = match.range.start;
+        editor.selection.setRange([start, start]);
+        editor.scroll = start.translate([-editor.buffer.options.cursorPadding.top, 0]);
+        editor._updateContent();
+        match.stop();
+      });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+Header.prototype._initHandlers = function () {
+var self = this;
+[&#x27;message&#x27;, &#x27;blink&#x27;].forEach(function (evt) {
+  self.on(evt, function () { self.screen.render(); });
+});
+self.helpButton.on(&#x27;press&#x27;, function () { self.screen.slap.<span class="apidocCodeKeywordSpan">help</span>(); });
+return BaseWidget.prototype._initHandlers.apply(self, arguments);
+};
+
+Header.prototype.render = function () {
+var self = this;
+
+var left = [&#x22;\u270b&#x22;];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.open" id="apidoc.element.slap.Slap.prototype.open">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () {
+    var ret = new Promise(INTERNAL);
+    ret._captureStackTrace();
+    ret._pushContext();
+    var value = tryCatch(fn).apply(this, arguments);
+    var promiseCreated = ret._popContext();
+    debug.checkForgottenReturns(
+        value, promiseCreated, &#x22;Promise.method&#x22;, ret);
+    ret._resolveFromSyncValue(value);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+FileBrowser.prototype.__proto__ = BaseWidget.blessed.FileManager.prototype;
+
+FileBrowser.prototype._initHandlers = function () {
+var self = this;
+var slap = self.screen.slap;
+self.on(&#x27;element mousedown&#x27;, function (el) { self.focus(); });
+self.on(&#x27;file&#x27;, function (path) { slap.<span class="apidocCodeKeywordSpan">open</span>(path, true).done(); });
+self.on(&#x27;cancel&#x27;, function () {
+  var currentPane = slap.getCurrentPane();
+  if (currentPane) currentPane.focus();
+});
+
+self.on(&#x27;focus&#x27;, function () {
+  self.style.selected = self.data.selectedStyle;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.paneForPath" id="apidoc.element.slap.Slap.prototype.paneForPath">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>paneForPath
+        <span class="apidocSignatureSpan">(panePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paneForPath = function (panePath) {
+  var self = this;
+  var pane;
+  panePath = util.resolvePath(panePath);
+  self.panes.some(function (openPane) {
+    if (openPane instanceof EditorPane &#x26;&#x26; openPane.editor.textBuf.getPath() === panePath) {
+      pane = openPane;
+      return true;
+    }
+  });
+  return pane;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+Slap.prototype.getPrevPane = function () {
+return this.panes[this.data.prevPane];
+};
+Slap.prototype.open = Promise.method(function (filePath, current) {
+var self = this;
+
+var pane = self.<span class="apidocCodeKeywordSpan">paneForPath</span>(filePath);
+return Promise.resolve(pane)
+  .then(function () {
+    if (pane) return;
+    if (fs.lstatSync(filePath).isDirectory()) throw _.merge(new Error(&#x27;EISDIR: illegal operation on a directory, read&#x27;), {
+cause: {code: &#x27;EISDIR&#x27;}});
+    pane = new EditorPane({parent: self});
+    return pane.editor.open(filePath);
+  })
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slap.Slap.prototype.quit" id="apidoc.element.slap.Slap.prototype.quit">
+        function <span class="apidocSignatureSpan">slap.Slap.prototype.</span>quit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">quit = function () {
+  var self = this;
+  var input = self.screen.program.input || {};
+  if (typeof input.unref === &#x27;function&#x27;) input.unref();
+  _.invoke(self.panes, &#x27;detach&#x27;);
+
+  // in case the above logic doesn&#x27;t exit the process, force quit
+  setTimeout(function () { process.exit(0); }, 200).unref();
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            if (!pane.close()) {
+pane.once(&#x27;close&#x27;, function () {
+  if (self._panesBlockingQuit) {
+    self._panesBlockingQuit.splice(self._panesBlockingQuit.indexOf(pane), 1);
+    if (self._panesBlockingQuit.length) {
+      self.getCurrentPane().saveAsCloseForm.show();
+    } else {
+      self.<span class="apidocCodeKeywordSpan">quit</span>();
+    }
+  }
+});
+pane.saveAsCloseForm.once(&#x27;cancel&#x27;, function () {
+  self._panesBlockingQuit.forEach(function (blockingPane) { blockingPane.saveAsCloseForm.hide(); });
+  self._panesBlockingQuit = null;
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
